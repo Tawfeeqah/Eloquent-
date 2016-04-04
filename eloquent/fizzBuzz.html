@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 2</title>
+</head>
+<body>
+<script>
+//    Code for the fizzbuzz
+    for(var count = 1; count<=100; count++){
+        if(count%3 == 0 && count%5 == 0){
+        console.log("fizzBuzz");
+        }
+        else if(count%3 == 0){
+            console.log("Fizz")
+        }
+        else if(count%5 == 0){
+            console.log("Buzz")
+        }
+        else
+            console.log(count)
+    }
+//      Code for the looping tree
+       var output = "";
+    for(var n = 1; n < 8; n++){
+        output += '#'
+        console.log(output)
+    }
+//      Code for the chess board
+     var input=8;
+     var space=" ";
+    var arsh="#";
+var firstString="";
+var theOtherString="";
+for(var i=1;i<=input;i++){
+        if(i%2==0){
+             firstString+=arsh;
+            theOtherString+=space;
+        }else{
+            firstString+=space;
+            theOtherString+=arsh;
+        }
+
+    }
+    //print to console
+for(var i=1;i<=input;i++){
+    if(i%2==0){
+        console.log(theOtherString);
+    }else{
+        console.log(firstString);
+    }
+
+}
+</script>
+</body>
+</html>

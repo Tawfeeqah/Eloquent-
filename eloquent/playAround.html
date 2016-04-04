@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>chapter 3</title>
+</head>
+<body>
+<script>
+    var power = function(base, exponent){
+        if(exponent ==  undefined)
+        exponent = 2;
+        var total = 1;
+        for(var i = 0; i< exponent; i++)
+            total *= base;
+           console.log(total)
+
+    };
+    power(2,5)
+    function powers(base, exponent){
+        if (exponent = 0)
+        return 1
+        else
+        return base*powers(base,exponent-1)
+    }
+    console.log(power(2,10));
+    function findSolution(target) {
+        function find(start, history) {
+            if (start == target)
+                return history;
+            else if (start > target)
+                return null;
+            else
+                return find(start + 5, "(" + history + " + 5)") ||
+                        find(start * 3, "(" + history + " * 3)");
+        }
+        return find(1, "1");
+    }
+    console.log(findSolution(24));
+    function printFarmInventory(cows,chickens){
+        var cowString = String(cows)
+        while(cowString.length<3)
+        cowString = "0" + cowString;
+        console.log(cowString + " cows")
+        var chickenString = String(chickens)
+        while(chickenString.length<3)
+        chickenString = "0" + chickenString;
+        console.log(chickenString + " chickens")
+    }
+    printFarmInventory(5,10)
+</script>
+</body>
+</html>

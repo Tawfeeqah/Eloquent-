@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>chapter 4</title>
+</head>
+<body>
+<script>
+
+//<!-- function of sum of range -->
+ function range(a,b){
+    var array = [];
+   for(var i = a; i <= b; i++)
+     array.push(i)
+return array
+}
+console.log(range(1,10))
+//<!--function of sum of range -->
+    function sum(array){
+        var total = 0;
+        for(var i = 0; i <= array.length-1; i++)
+            total += array[i];
+        return total;
+    }
+    console.log(sum(range(1,10)))
+</script>
+</body>
+</html>
